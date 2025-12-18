@@ -35,17 +35,17 @@ main proc
     mov ds, ax
 
 ; Print title at top center
-mov ah, 02h      ; Set cursor position
-mov bh, 0        ; Page number
-mov dh, 0        ; Row = 0 (top row)
-mov dl, 30       ; Column = 30
+mov ah, 02h
+mov bh, 0  
+mov dh, 0  
+mov dl, 30 
 int 10h
 
 mov dx, offset msg_title
-mov ah, 09h      ; Print string
+mov ah, 09h  
 int 21h
 
-call newline     ; Move to next line before prompt
+call newline 
 
 input_loop:  
     call newline
